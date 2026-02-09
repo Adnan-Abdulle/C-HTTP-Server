@@ -34,3 +34,8 @@ put the url link:
 ```bash
 http://localhost:8080/<file name>
 ```
+
+### Current supported files:
+hello.txt
+
+file.txt
