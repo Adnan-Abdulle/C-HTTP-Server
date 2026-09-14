@@ -1,42 +1,73 @@
-## Run the Program
+# C HTTP Server
 
-### Server Side:
-Do:
+A multi-client HTTP server built in C using TCP socket programming and `poll()`. The server handles HTTP requests, serves local files, and supports `GET` and `HEAD` requests.
+
+## Features
+
+- TCP socket communication
+- Handles multiple client connections using `poll()`
+- Supports HTTP `GET` and `HEAD` requests
+- Serves local files
+- Handles invalid or missing files
+- HTTP response handling
+
+## Technologies
+
+- C
+- TCP/IP
+- HTTP
+- POSIX Sockets
+- `poll()`
+- GCC
+
+## How to Run
+
+### 1. Clone the repository
+
 ```bash
-gcc *.c -o main
+git clone https://github.com/Adnan-Abdulle/C-HTTP-Server.git
+cd C-HTTP-Server
 ```
 
-then:
+### 2. Compile
 
 ```bash
-./main
+gcc *.c -o server
+```
+
+### 3. Start the server
+
+```bash
+./server
+```
+
+The server runs on:
+
+```text
+localhost:8080
+```
+
+### 4. Test the server
+
+Open another terminal and send a GET request:
+
+```bash
+curl http://localhost:8080/<filename>
+```
+
+Send a HEAD request:
+
+```bash
+curl -I http://localhost:8080/<filename>
+```
+
+You can also access the server from a browser:
+
+```text
+http://localhost:8080/<filename>
 ```
 
 
-### Client
+## Author
 
-open another terminal or go the web browser
-#### Terminal
-do:
-
-For GET requests:
-```bash
-curl http://localhost:8080/<file name>
-```
-
-For HEAD requests:
-```bash
-curl -I http://localhost:8080/<file name>
-```
-### Web Browser
-
-put the url link:
-```bash
-http://localhost:8080/<file name>
-```
-
-### Current supported files:
-
-hello.txt
-
-file.txt
+Adnan Abdulle
